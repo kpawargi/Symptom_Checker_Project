@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Familjen Grotesk", sans-serif;
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header/Navbar */
+.main-header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: solid 2px black;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    height: 40px;
+}
+
+/* Logo */
+
+.logo img {
+    position: absolute;
+    height: 40px;
+    top: 0px;
+    left: 50px;
+}
+
+/* Desktop Menu */
+.desktop-main-menu {
+    right: 50px;
+    top: 50px;
+    margin-right: 50px;
+}
+
+.desktop-main-menu ul {
+    display: flex;
+}
+
+.desktop-main-menu ul li {
+    position: relative;
+    font-weight: 500;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
+
+/* Menu item bottom border */
+.desktop-main-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: black;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+}
+
+.desktop-main-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+}
+
+
+/* Sections */
+section {
+    position: relative;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+.section-inner {
+    position: absolute;
+    bottom: 130px;
+    left: 300px;
+    max-width: 560px;
+}
+
+.section-inner h5 {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.section-inner h4 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.5s ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+
+.section-inner a {
+    animation: fadeInUp 0.5s ease-in-out 0.4s;
+    animation-fill-mode: both;
+}
+
+
+.btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    margin-top: 10px;
+    color: rgb(173, 0, 0);
+    background-color: white;
+    border: 2px solid rgb(173, 0, 0);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btn:hover span {
+    color: white;
+}
+
+.btn .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 0, 0);
+    color: white;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .hover {
+    transform: translateY(0);
+}
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeBounce 5s infinite;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    padding: 15px 0;
+    background-color: #f7fff9;
+    border-top: solid 1px rgb(78, 78, 78);
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer ul li {
+    margin-right: 30px;
+    color: rgb(50, 50, 50);
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 2.5;
+    cursor: pointer;
+}
+
+footer ul li a {
+    color: rgb(50, 50, 50);
+    transition: color 0.6s;
+}
+
+footer ul li a:hover {
+    color: black;
+}
+
+/* Overlay */
+.overlay-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(140px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeBounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img img {
+    position: absolute;
+    top: 140px;
+    right: 220px;
+    width: 350px;
+}
+
+/* Links */
+
+.linked {
+    position: absolute;
+    left: 50px;
+    bottom: 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 5px;
+}
+
+.twitter:hover {
+    color: black;
+    scale: 1.3;
+}
+
+.instagram:hover {
+    color: palevioletred;
+    scale: 1.3;
+}
+
+.facebook:hover {
+    color: blue;
+    scale: 1.3;
+}
+
+.line {
+    position: absolute;
+    background-image: linear-gradient(to bottom, black, palevioletred, blue);
+    left: 80px;
+    bottom: 300px;
+    width: 2px;
+    height: 86px;
+}
+
+.section-b {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.section-b .why {
+    position: absolute;
+    color: rgb(198, 3, 3);
+    font-weight: 500;
+    top: 80px;
+    right: 400px;
+    font-size: 50px;
+}
+
+.section-a {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #7db9e8, #ffffff);
+    padding: 50px;
+}
+
+.why2 .info1 {
+    background-color: beige;
+    box-shadow: 15px 15px 4px 1px #94c4c7;
+    position: absolute;
+    text-align: center;
+    left: 80px;
+    bottom: 320px;
+    border-radius: 10px;
+    border: solid 2px black;
+    width: 320px;
+    height: 220px;
+}
+
+.why2 .info2 {
+    background-color: beige;
+    box-shadow: 9px 9px 4px 1px #94c4c7;
+    position: absolute;
+    text-align: center;
+    left: 380px;
+    bottom: 50px;
+    border-radius: 10px;
+    border: solid 2px black;
+    width: 340px;
+    height: 220px;
+}
+
+.why2 .info3 {
+    background-color: beige;
+    box-shadow: -5px 5px 4px 1px #94c4c7;
+    position: absolute;
+    text-align: center;
+    right: 320px;
+    bottom: 90px;
+    border-radius: 10px;
+    border: solid 2px black;
+    width: 300px;
+    height: 200px;
+}
+
+.why2 .info4 {
+    background-color: beige;
+    box-shadow: -15px 15px 4px 1px #94c4c7;
+    position: absolute;
+    text-align: center;
+    right: 200px;
+    top: 200px;
+    border-radius: 10px;
+    border: solid 2px black;
+    width: 310px;
+    height: 200px;
+    transition-delay: 800ms;
+}
+
+.why2 .screw1 {
+    width: 30px;
+    position: absolute;
+    left: 90px;
+    bottom: 330px;
+    transform: rotate(90deg);
+}
+
+.why2 .screw2 {
+    width: 30px;
+    position: absolute;
+    left: 680px;
+    bottom: 60px;
+}
+
+.why2 .screw3 {
+    width: 30px;
+    position: absolute;
+    right: 330px;
+    bottom: 100px;
+    transform: rotate(90deg);
+}
+
+.why2 .screw4 {
+    width: 30px;
+    position: absolute;
+    right: 470px;
+    top: 355px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 200px 0;
+}
+
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    transition: 0.5s;
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+    transition: 0.5s;
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+}
+
+.container .box:hover:before,
+.container .box:hover:after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after {
+    background: linear-gradient(315deg, #ff0000, #980000);
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after {
+    background: linear-gradient(315deg, #ff0000, #980000);
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after {
+    background: linear-gradient(315deg, #ff0000, #980000);
+}
+
+.container .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.container .box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.5);
+}
+
+.container .box:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.container .box span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rbga(0, 0, 0, 0.5);
+    animation-delay: -1s;
+}
+
+.container .box:hover span::after {
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.container .box .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    /*box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);*/
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.container .box:hover .content {
+    left: -25px;
+    padding: 50px 40px;
+}
+
+.container .box .content h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .box .content p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+
+.container .box .content a {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-top: 5px;
+}
+
+.section-c {
+    position: relative;
+    height: 100vh;
+    background-color: #fffaf7;
+}
+
+.section-c .choose{
+    font-size: 60px;
+    position: absolute;
+    top: 80px;
+    left: 400px;
+    font-weight: 300;
+    color: black;
+}
+
+.section-d {
+    position: relative;
+    height: 100vh;
+    background-color: #f7fff9;
+}
+
+.section-d .text1{
+    font-size: 80px;
+    position: absolute;
+    left: 100px;
+    top: 70px;
+}
+
+.section-d .text2{
+    font-size: 30px;
+    position: absolute;
+    width: 600px;
+    left: 550px;
+    top: 250px;
+}
+
+.section-d .doctor2 img{
+    position: absolute;
+    height: 450px;
+    left: 150px;
+    top: 230px;
+}
+
+.btn1 {
+    position: absolute;
+    top: 520px;
+    left: 550px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    margin-top: 10px;
+    color: rgb(173, 0, 0);
+    background-color: white;
+    border: 2px solid rgb(173, 0, 0);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btn1:hover span {
+    color: white;
+}
+
+.btn1 .hover1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(173, 0, 0);
+    color: white;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn1:hover .hover1 {
+    transform: translateY(0);
+}
+
+.section-d .text3{
+    font-size: 15px;
+    color: #383838;
+    font-style: italic;
+    position: absolute;
+    left: 550px;
+    top: 630px;
+}
+

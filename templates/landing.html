@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}" />
+  <script src="https://kit.fontawesome.com/2b303bbe37.js" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>
+  <title>DiagnoMate</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <a href="{{ url_for('landing') }}">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DiagnoMate" />
+      </a>
+    </div>
+    <nav class="desktop-main-menu">
+      <ul>
+        <li><a href="{{ url_for('about') }}" class="nav">About Us</a></li>
+        <li><a href="{{ url_for('pricing') }}" class="nav">Pricing</a></li>
+        <li><a href="{{ url_for('contact') }}" class="nav">Contact us</a></li>
+        <li><a href="{{ url_for('login') }}" class="button">Sign In</a></li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section A -->
+  <section class="section-a">
+    <div class="linked">
+      <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <div class="line"></div>
+    <div class="section-inner">
+      <h4>Symptom Cheker</h4>
+      <h2>Diagnomate</h2>
+      <h5>Welcome to DiagnoMate. DiagnoMate is your trusted online symptom checker, designed to provide you with
+        accurate information and
+        guidance about your health concerns. Whether you're experiencing a cough, headache, fever, or any other symptom,
+        DiagnoMate is your go-to resource for understanding what might be going on. Are you feeling under the weather?
+        Wondering what those symptoms might mean? Look no further! DiagnoMate is here to help you understand your
+        symptoms and guide you towards the right next steps.</h5>
+      <a href="{{ url_for('check') }}" class="btn">
+        <div class="hover"></div>
+        <span>Check Now</span>
+      </a>
+    </div>
+    <div class="img"><img src="{{ url_for('static', filename='images/doctor.png') }}" alt="Doctor"></div>
+  </section>
+
+  <!-- Section B -->
+  <section class="section-b">
+    <div class="">
+      <div class="why">How Does DiagnoMate Work ?</div>
+      <div class="why2">
+        <div class="info1">
+          <p>
+            Using cutting-edge technology and medical expertise, DiagnoMate analyzes your symptoms and provides
+            personalized recommendations tailored to your specific situation. Our user-friendly interface makes it easy
+            to input your symptoms and receive instant feedback on possible causes and next steps.
+          </p>
+        </div>
+        <img class="screw1" src="{{ url_for('static', filename='images/screw1.png') }}" alt="Screw">
+        <div class="info2">
+          <p>
+            Begin by inputting
+            your symptoms into the DiagnoMate platform. You can describe your symptoms in detail, including their
+            severity, duration, and any additional relevant information.DiagnoMate carefully analyzes the symptoms
+            you've provided, cross-referencing them with its extensive medical database.
+          </p>
+        </div>
+        <img class="screw2" src="{{ url_for('static', filename='images/screw1.png') }}" alt="Screw">
+        <div class="info3">
+          <p>
+            Based on the symptom analysis,
+            DiagnoMate generates a list of potential conditions or diseases that could be causing your symptoms. This
+            list is known as a "differential diagnosis" and is ranked based on the likelihood of each
+            condition.
+          </p>
+        </div>
+        <img class="screw3" src="{{ url_for('static', filename='images/screw1.png') }}" alt="Screw">
+        <div class="info4">
+          <p>
+            DiagnoMate then provides you with personalized recommendations based on the differential
+            diagnosis. These recommendations may include advice on self-care measures, suggestions for further
+            evaluation, or guidance on when to seek medical attention.
+          </p>
+        </div>
+        <img class="screw4" src="{{ url_for('static', filename='images/screw1.png') }}" alt="Screw">
+      </div>
+    </div>
+
+    <div class="scroll-arrow">
+      <svg width="30px" height="20px">
+        <path stroke="#000" fill="none" stroke-width="2px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Section C -->
+  <section class="section-c">
+    <div class="">
+      <div class="choose">Why Choose DiagnoMate ?</div>
+      <div class="container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Accuracy</h2>
+            <p>Backed by a team of healthcare professionals, DiagnoMate delivers reliable information you can trust.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Convenience</h2>
+            <p>Skip the wait at the doctor's office and get answers from the comfort of your own home, on your schedule.
+            </p>
+            <a href="">Read More</a>
+          </div>
+        </div>
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>Peace of Mind</h2>
+            <p>Whether it's a minor ailment or something more serious, DiagnoMate helps you understand your symptoms and
+              take control of your health.</p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-arrow">
+      <svg width="30px" height="20px">
+        <path stroke="#000" fill="none" stroke-width="2px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Section D -->
+  <section class="section-d">
+    <div class="">
+      <div class="text1">Get Started Today ! ! !</div>
+      <div class="text2">Don't let uncertainty about your health hold you back. Start using DiagnoMate now to gain
+        insight into your symptoms and make informed decisions about your well-being. Your health matters, and
+        DiagnoMate is here to support you every step of the way.</div>
+      <div class="doctor2"><img src="{{ url_for('static', filename='images/doctor2.png') }}" alt="Doctor 2"></div>
+      <a href="{{ url_for('check') }}" class="btn1">
+        <div class="hover1"></div>
+        <span>Check Now</span>
+      </a>
+      <div class="text3">Disclaimer: DiagnoMate is not a substitute for professional medical advice. If you have
+        concerns about your health, please consult with a qualified healthcare provider.</div>
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li>DiagnoMate &copy; 2024</li>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">X</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>

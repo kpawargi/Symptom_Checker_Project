@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <script defer src="{{ url_for('static', filename='js/login.js') }}"></script>
+</head>
+
+<body>
+    <header class="">
+        <div class="logo">
+            <a href="{{ url_for('landing') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DiagnoMate" />
+            </a>
+        </div>
+        <nav class="main">
+            <ul>
+                <li><a href="{{ url_for('about') }}" class="nav1">About Us</a></li>
+                <li><a href="{{ url_for('pricing') }}" class="nav2">Pricing</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav3">Contact Us</a></li>
+                <li><a href="{{ url_for('check') }}" class="nav4"><button class="btn">Check Now</button></a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <div class="img">
+        <img id="doctorImage" class="image" src="{{ url_for('static', filename='images/pngwing.com.png') }}" alt="doctor">
+    </div>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signupForm">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social google"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" id="signupName" placeholder="Name" />
+                <input type="email" id="signupEmail" placeholder="Email" />
+                <input type="password" id="signupPassword" placeholder="Password" />
+                <button type="button" class="button" id="signupButton">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="signinForm">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" id="signinEmail" placeholder="Email" />
+                <input type="password" id="signinPassword" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button type="button" class="button" id="signinButton">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost button" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost button" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="linked">
+        <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/about.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="">
+        <div class="logo">
+            <a href="{{ url_for('landing') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DiagnoMate" />
+            </a>
+        </div>
+        <nav class="main">
+            <ul>
+                <li><a href="{{ url_for('contact') }}" class="nav1">Contact</a></li>
+                <li><a href="{{ url_for('pricing') }}" class="nav2">Pricing</a></li>
+                <li><a href="{{ url_for('login') }}" class="nav3">Sign In</a></li>
+                <li><a href="{{ url_for('check') }}" class="nav4"><button class="button">Check Now</button></a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="head">Welcome to DiagnoMate</div>
+        <div class="info1">Welcome to DiagnoMate, your trusted companion in navigating health concerns with confidence and clarity. At DiagnoMate, we understand that health is paramount, and uncertainties surrounding symptoms can be distressing. That's why we've crafted a comprehensive platform to empower individuals to make informed decisions about their health.</div>
+
+        <div class="info2">Our mission at DiagnoMate is to democratize access to reliable health information and guidance. We believe that everyone should have the tools and resources to understand their symptoms and take proactive steps towards well-being. By leveraging cutting-edge technology and medical expertise, we strive to provide accurate assessments and personalized recommendations tailored to each user's unique needs.</div>
+    </section>
+    <div class="linked">
+        <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+</body>
+</html>

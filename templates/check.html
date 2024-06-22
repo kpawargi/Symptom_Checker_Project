@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2b303bbe37.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/check.css') }}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script defer src="{{ url_for('static', filename='js/check.js') }}"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="{{ url_for('landing') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DiagnoMate" />
+            </a>
+        </div>
+        <nav class="main">
+            <ul>
+                <li><a href="{{ url_for('about') }}" class="nav1">About Us</a></li>
+                <li><a href="{{ url_for('pricing') }}" class="nav2">Pricing</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav3">Contact us</a></li>
+                <li><a href="{{ url_for('login') }}" class="nav4">Sign In</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <h1 class="title">WELCOME</h1>
+                <div class="info1">
+                    <p>Before using this symptom checker, please read carefully and accept our Terms and Services:</p>
+                    <ul>
+                        <li> This checkup is not a diagnosis.</li>
+                        <li> This checkup is for informational purposes and is not a qualified medical opinion.</li>
+                        <li> Information that you provide is anonymous and not shared with anyone. We also do not store
+                            any
+                            information on our server.</li>
+                    </ul>
+                    <input type="checkbox" id="checkbox" class="cb">
+                    <label for="checkbox">I agree to the DiagnoMate terms and conditions</label><br>
+                </div>
+            </div>
+            <div class="item">
+                <h1 class="title">PATIENT</h1>
+                <div class="info2">
+                    <p class="para">What is your age ?</p>
+                    <div class="wrapper">
+                        <input type="range" id="ageSlider" min="0" step="1" max="100" value="0" />
+                        <span class="slide-value">0</span>
+                    </div>
+                    <p class="para2">What is your sex ?</p>
+                    <form class="form">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            Female
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="item">
+                <h1 class="title">PATIENT</h1>
+                <div class="info3">
+                    <h2 class="_1">Please check all the statement below that applies you</h2>
+                    <p class="_2">Select one answer in each row</p>
+                    <h3 class="_3">I am overweight</h3>
+                    <form class="form1">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            I Dont Know
+                        </label>
+                    </form>
+                    <h3 class="_4">I smoke cigarettes</h3>
+                    <form class="form2">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            I Dont Know
+                        </label>
+                    </form>
+                    <h3 class="_5">I have been recently injured</h3>
+                    <form class="form3">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            I Dont Know
+                        </label>
+                    </form>
+                    <h3 class="_6">I have high cholesterol</h3>
+                    <form class="form4">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            I Dont Know
+                        </label>
+                    </form>
+                    <h3 class="_7">I have hypertensionl</h3>
+                    <form class="form5">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            I Dont Know
+                        </label>
+                    </form>
+                    <h3 class="_8">I have diabetes</h3>
+                    <form class="form6">
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            No
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female">
+                            I Dont Know
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="item">
+                <h1 class="title">SYMPTOM</h1>
+                <div class="search-container">
+                    <input type="text" id="symptomSearch" placeholder="  Search symptoms...">
+                </div>
+                <div class="sym">
+                    <div class="scroll">
+                    </div>
+                    <div class="selected"></div>
+                </div>
+            </div>
+            <div class="item">
+                <h1 class="title">DISEASE</h1>
+                <div class="disease_box">
+                    <div class="disease">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev">BACK</button>
+            <button id="next">NEXT</button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="linked">
+        <a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
+</body>
+
+</html>
