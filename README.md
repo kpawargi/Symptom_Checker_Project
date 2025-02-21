@@ -5,11 +5,11 @@
 
 ## 📌 Features-
 
-✅ Developed a web-based symptom checker using Python and Flask.
-✅ Predicts potential diseases based on user-input symptoms.
-✅ Utilizes a Naïve Bayes Classifier trained on healthcare datasets.
-✅ Provides a preliminary diagnosis to assist users in making informed decisions.
-✅ Enhances accessibility to health insights with an easy-to-use interface.
+✅ Developed a web-based symptom checker using Python and Flask.  
+✅ Predicts potential diseases based on user-input symptoms.  
+✅ Utilizes a Naïve Bayes Classifier trained on healthcare datasets.  
+✅ Provides a preliminary diagnosis to assist users in making informed decisions.  
+✅ Enhances accessibility to health insights with an easy-to-use interface.  
 
 ## ⚙️ Tech Stack
 Machine Learning Model: Naïve Bayes Classifier
