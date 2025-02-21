@@ -26,7 +26,6 @@ symptom-checker/
 │── app.py                     # Main Flask application file
 │── model_symptom_checker.pkl   # Trained machine learning model (serialized)
 │── README.md                  # Project documentation (this file)
-
 ```
 
 ## 🚀 Installation & Setup
