@@ -18,6 +18,7 @@ Frontend: HTML, CSS, JavaScript
 Libraries Used: Pandas, NumPy, Scikit-learn  
 
 ## 📂 Project Structure-
+```plaintext
 symptom-checker/  
 │── .vscode/                   # VS Code settings
 │── static/                    # Static files (CSS, JS, images)
@@ -25,6 +26,8 @@ symptom-checker/
 │── app.py                     # Main Flask application file
 │── model_symptom_checker.pkl   # Trained machine learning model (serialized)
 │── README.md                  # Project documentation (this file)
+
+```
 
 ## 🚀 Installation & Setup
 
